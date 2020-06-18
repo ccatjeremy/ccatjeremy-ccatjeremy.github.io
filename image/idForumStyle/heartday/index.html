@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jquery.min.js"></script>
+<script src="jquery.min.js"></script>
+<title>心臟日</title>
+</head>
+<body style="overflow:hidden;" topmargin="0" leftmargin="0">
+<div style="position:relative;height:150px;width:850px;overflow:hidden;">
+<img src="banner2014.png" style="position:absolute">
+<img src="roomX.png" id="room" style="position:absolute;left:292px;z-index:10;">
+<img src="heartX.png" id="heart" style="position:absolute;left:352;top:10px;z-index:11;width:130px;cursor:pointer;">
+<img src="topX.png" id="top" style="position:absolute;left:318px;top:-14px;z-index:12;">
+<img src="bottomX.png" id="bottom" style="position:absolute;left:318px;bottom:-14px;z-index:12;">
+<img src="leftX.png" id="left" style="position:absolute;left:280px;z-index:13;">
+<img src="rightX.png" id="right" style="position:absolute;left:399px;z-index:13;">
+<img src="clickX.png" id="click" style="position:absolute;left:630px;top:73;z-index:15;cursor:pointer;">
+</div>
+
+
+</body>
+<script languge="JavaScript">
+$(document).ready(function(){
+
+var x=0
+	$("#click").click(function(){
+	shack();	
+		again(x);
+		x++
+		
+
+		});
+	$("#heart").click(function(){
+	
+	window.open(' https://www.google.com.tw/search?q=%E4%B8%96%E7%95%8C%E5%BF%83%E8%87%9F%E6%97%A5&oq=%E4%B8%96%E7%95%8C%E5%BF%83%E8%87%9F&aqs=chrome.1.69i57j0l5.5887j0j4&sourceid=chrome&es_sm=122&ie=UTF-8','_tab')
+ });
+
+
+	});
+
+
+function shack(){
+			
+	$("#heart").animate({width:"120"},150);
+$("#heart").animate({width:"130"},250);
+setTimeout("shack()",100);
+};
+function again(y){
+if(y%2==0)
+{$("#right").stop().animate({left:"487"},500);
+		$("#left").stop().animate({left:"202"},500);
+		$("#top").stop().animate({top:"-89"},1500);
+		$("#bottom").stop().animate({bottom:"-89"},1500);}
+		else{
+		$("#left").stop().animate({left:"280"},1400);
+		$("#right").stop().animate({left:"399"},1400);
+		$("#top").stop().animate({top:"-14"},500);
+		$("#bottom").stop().animate({bottom:"-14"},500);
+		
+		}
+		
+
+}
+
+
+</script>
+ 
+
+
+</html>
