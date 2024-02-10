@@ -1,0 +1,115 @@
+
+<html>
+  <head>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=yes"/>
+    <meta charset="UTF-8" />
+    <title>Bunny's Avatar</title>
+	<script type="text/javascript" src="jquery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="jquery/jquery.animate-colors-min.js"></script>
+	<script type="text/javascript" src="jquery/jQueryRotate.js"></script>
+	<script type="text/javascript" src="jquery/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="jquery/html2canvas.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+	<meta name="keywords" content="WU,PingYen,Product,design,portfolio">
+    <link href="index.css" rel="stylesheet">
+	 <LINK REL="SHORTCUT ICON" HREF="favicon.ico"> 
+	</head>
+  <body>
+	<div id="load">
+		<div id="load_photo">
+		<div id="load_A"></div>
+		<div id="load_B">loading...</div>
+		<div id="load_C"></div>
+		</div>
+	</div>
+	<div id="main">
+		<div id="header" onclick="saveImg()" >
+			<div id="header_content">
+			</div>
+		</div>
+	<div id="p1">
+		<div id="avatar">
+			<div id="bg1" class="avatar"><img src="image/bg1.png"></div>
+			<div id="bg2" class="avatar"></div>
+			<div id="eye1" class="avatar"></div>
+			<div id="mou1" class="avatar"></div>
+			<div id="acc1" class="avatar"></div>
+		</div>
+	</div>
+
+	<div id="footer">
+	Copyright © 2024 Bunny is moving , All rights reserved
+	</div>	
+</div>
+
+  </body>
+
+<script>
+
+
+
+
+function saveImg() {
+    var element = document.querySelector("body");
+    html2canvas(element, {
+        allowTaint: true,
+        useCORS: true,
+        onrendered: function(canvas) {
+            var download = document.createElement('a');
+            download.href = canvas.toDataURL("image/png");
+            download.download = "quote.png";
+            download.click();
+        }
+    });
+}
+
+
+
+var x = window.innerWidth;
+var z = window.innerHeight;
+$(function(){
+function loadAnimate(){
+$('#load_A').animate({'left':0},1000);
+$('#load_A').animate({'left':18},1000);
+
+};
+loadAnimate()
+setInterval(loadAnimate,2500);
+});
+
+
+
+function adjust(){
+if(x<1500&&x>1082){
+$('#p1').css('width','1082');
+
+}else if(x<1081&&x>638){
+
+$('#p1').css('width','95%');
+
+}else if(x<638){
+
+$('#header_content').css('font-size','14');
+$('#header_content').css('width','338');
+$('#p1').css('width','100%');
+}else{}
+
+};
+adjust()
+$(window).resize(function() {
+adjust();
+});
+<!--load animate-->
+$(window).load(function() {
+$( "#load" ).fadeOut();
+$('html, body').animate({scrollTop: $("#header").offset().top},10);
+});
+
+</script>
+</html>
+
+
+
+
+

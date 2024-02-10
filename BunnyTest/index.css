@@ -1,0 +1,48 @@
+/*common*/
+#header{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+}
+
+#p1{
+margin-left:auto;
+margin-right:auto;
+width:50%;
+height:auto;
+position:relative;
+}
+
+#avatar{
+    width: 600px;
+    height: 600px;
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: blueviolet;
+}
+.avatar{
+    width:100%;
+    height : 100%;
+    position: absolute;
+}
+#bg1{
+    /* background-image:url("image/bg1.png"); */
+    background-position:center;
+    background-size:cover;
+}
+#eye1{
+    background-image:url("image/eye1.png");
+    background-position:center;
+    background-size:cover;
+}
+#mou1{
+    background-image:url("image/mou1.png");
+    background-position:center;
+    background-size:cover;
+}
+#acc1{
+    background-image:url("image/acc1.png");
+    background-position:center;
+    background-size:cover;
+}
