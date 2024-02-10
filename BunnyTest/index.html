@@ -30,11 +30,11 @@
 		</div>
 	<div id="p1">
 		<div id="avatar">
-			<div id="bg1" class="avatar"><img src="image/bg1.png"></div>
-			<div id="bg2" class="avatar"></div>
-			<div id="eye1" class="avatar"></div>
-			<div id="mou1" class="avatar"></div>
-			<div id="acc1" class="avatar"></div>
+			<div id="bg1" class="avatar"><img class="imgAvatar" src="image/bg1.png"></div>
+			<div id="bg2" class="avatar"><img class="imgAvatar" src="image/bg2.png"></div>
+			<div id="eye1" class="avatar"><img class="imgAvatar" src="image/eye1.png"></div>
+			<div id="mou1" class="avatar"><img class="imgAvatar" src="image/mou1.png"></div>
+			<div id="acc1" class="avatar"><img class="imgAvatar" src="image/acc1.png"></div>
 		</div>
 	</div>
 
@@ -47,18 +47,21 @@
 
 <script>
 
-
+$('#bg1').css('display','block');
+$('#eye1').css('display','block');
+$('#mou1').css('display','block');
+$('#acc1').css('display','block');
 
 
 function saveImg() {
-    var element = document.querySelector("body");
+    var element = document.querySelector("#avatar");
     html2canvas(element, {
         allowTaint: true,
         useCORS: true,
         onrendered: function(canvas) {
             var download = document.createElement('a');
             download.href = canvas.toDataURL("image/png");
-            download.download = "quote.png";
+            download.download = "bunny.png";
             download.click();
         }
     });
