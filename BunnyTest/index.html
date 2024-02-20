@@ -34,6 +34,7 @@
 					<div id="ranPic3" class="ranPic"></div>
 				</div>
 			</div>
+			<div id="again" onclick="openLink('again')" ></div>
 		</div>
 
 		<div id="avatar">
@@ -45,18 +46,14 @@
 			<div id="bas5" class="avatarBA"><img class="imgAvatar" src="image/bas5.png"></div>
 			<div id="bas6" class="avatarBA"><img class="imgAvatar" src="image/bas6.png"></div>
 			<div id="bas7" class="avatarBA"><img class="imgAvatar" src="image/bas7.png"></div>
-			<div id="bas8" class="avatarBA"><img class="imgAvatar" src="image/bas8.png"></div>
-			<div id="bas9" class="avatarBA"><div class="imgAvatar" style="background-color: #2e3035;"></div></div>
-			<div id="bas10" class="avatarBA"><div class="imgAvatar" style="background-color: #abca8d;"></div></div>
-			<div id="bas11" class="avatarBA"><div class="imgAvatar" style="background-color: #abd7e3;"></div></div>
-			<div id="bas12" class="avatarBA"><div class="imgAvatar" style="background-color: #b1b1b1;"></div></div>
-			<div id="bas13" class="avatarBA"><div class="imgAvatar" style="background-color: #d8e4e6;"></div></div>
-			<div id="bas14" class="avatarBA"><div class="imgAvatar" style="background-color: #df827a;"></div></div>
-			<div id="bas15" class="avatarBA"><div class="imgAvatar" style="background-color: #F1c89c;"></div></div>
-			<div id="bas16" class="avatarBA"><div class="imgAvatar" style="background-color: #F4e8ba;"></div></div>
-			<div id="bas17" class="avatarBA"><div class="imgAvatar" style="background-color: #f6c1c1;"></div></div>
-			<div id="bas18" class="avatarBA"><div class="imgAvatar" style="background-color: #faba70;"></div></div>
-			<div id="bas19" class="avatarBA"><div class="imgAvatar" style="background-color: #ffffff;"></div></div>
+			<div id="bas8" class="avatarBA"><div class="imgAvatar" style="background-color: #abca8d;"></div></div>
+			<div id="bas9" class="avatarBA"><div class="imgAvatar" style="background-color: #abd7e3;"></div></div>
+			<div id="bas10" class="avatarBA"><div class="imgAvatar" style="background-color: #b1b1b1;"></div></div>
+			<div id="bas11" class="avatarBA"><div class="imgAvatar" style="background-color: #df827a;"></div></div>
+			<div id="bas12" class="avatarBA"><div class="imgAvatar" style="background-color: #F1c89c;"></div></div>
+			<div id="bas13" class="avatarBA"><div class="imgAvatar" style="background-color: #f6c1c1;"></div></div>
+			<div id="bas14" class="avatarBA"><div class="imgAvatar" style="background-color: #faba70;"></div></div>
+			<div id="bas15" class="avatarBA"><div class="imgAvatar" style="background-color: #ffffff;"></div></div>
 			<div id="bg1" class="avatarB"><img class="imgAvatar" src="image/bg1.png"></div>
 			<div id="bg2" class="avatarB"><img class="imgAvatar" src="image/bg2.png"></div>
 			<div id="bg3" class="avatarB"><img class="imgAvatar" src="image/bg3.png"></div>
@@ -126,8 +123,8 @@
 			<div id="bgTab" class="tab" onclick="tabClick('bg')"></div>
 			<div id="eyeTab" class="tab" onclick="tabClick('eye')"></div>
 			<div id="mouTab" class="tab" onclick="tabClick('mou')"></div>
-			<div id="accTab" class="tab" onclick="tabClick('acc')"></div>
 			<div id="facTab" class="tab" onclick="tabClick('fac')"></div>
+			<div id="accTab" class="tab" onclick="tabClick('acc')"></div>
 			<div id="basTab" class="tab" onclick="tabClick('bas')"></div>
 		</div>
 		<div id="contentArea">
@@ -198,7 +195,7 @@
 				<div class="contentProp" id="conBas5" onclick="contentClick(5,'#bas','BA','Bas')"><a></a></div>
 				<div class="contentProp" id="conBas6" onclick="contentClick(6,'#bas','BA','Bas')"><a></a></div>
 				<div class="contentProp" id="conBas7" onclick="contentClick(7,'#bas','BA','Bas')"><a></a></div>
-				<div class="contentProp" id="conBas8" onclick="contentClick(8,'#bas','BA','Bas')"><a></a></div>
+				<div class="contentProp" id="conBas8" onclick="contentClick(8,'#bas','BA','Bas')"><span></span><a></a></div>
 				<div class="contentProp" id="conBas9" onclick="contentClick(9,'#bas','BA','Bas')"><span></span><a></a></div>
 				<div class="contentProp" id="conBas10" onclick="contentClick(10,'#bas','BA','Bas')"><span></span><a></a></div>
 				<div class="contentProp" id="conBas11" onclick="contentClick(11,'#bas','BA','Bas')"><span></span><a></a></div>
@@ -206,10 +203,7 @@
 				<div class="contentProp" id="conBas13" onclick="contentClick(13,'#bas','BA','Bas')"><span></span><a></a></div>
 				<div class="contentProp" id="conBas14" onclick="contentClick(14,'#bas','BA','Bas')"><span></span><a></a></div>
 				<div class="contentProp" id="conBas15" onclick="contentClick(15,'#bas','BA','Bas')"><span></span><a></a></div>
-				<div class="contentProp" id="conBas16" onclick="contentClick(16,'#bas','BA','Bas')"><span></span><a></a></div>
-				<div class="contentProp" id="conBas17" onclick="contentClick(17,'#bas','BA','Bas')"><span></span><a></a></div>
-				<div class="contentProp" id="conBas18" onclick="contentClick(18,'#bas','BA','Bas')"><span></span><a></a></div>
-				<div class="contentProp" id="conBas19" onclick="contentClick(19,'#bas','BA','Bas')"><span></span><a></a></div>
+
 			</div>
 			<div id="facContent" class="content">
 				<div class="contentProp" id="conFac1" onclick="contentClick(1,'#fac','F','Fac')"><a></a></div>
@@ -225,23 +219,27 @@
 			</div>
 		</div>
 		<div id="resultPage">
-			<div id="download" onclick="saveImg()"><a>Download</a></div>
+			<div id="download" onclick="saveImg()"><a>下載</a></div>
+			<div id="donateB" onclick="openLink('sup')"><a>請廢兔喝咖啡</a></div>
+			<div id="storeArea">
+				<div id="store1" class="store" onclick="openLink('shop')">廢兔的店</div>
+				<div id="store2" class="store">聯名商品</div>
+			</div>
+
 			<div id="socialMedia">
 				<a>Follow Bunny is moving on </a>
 				<div id="smsArea">
-					<div id="fb" class="SMS"></div>
-					<div id="inst" class="SMS"></div>
-					<div id="yt" class="SMS"></div>
-					<div id="tik" class="SMS"></div>
+					<div id="inst" class="SMS" onclick="openLink('ig')"></div>
+					<div id="yt" class="SMS" onclick="openLink('yt')"></div>
+					<div id="line" class="SMS" onclick="openLink('line')"></div>
+					<div id="all" class="SMS" onclick="openLink('all')"></div>
 				</div>
 			</div>
 		</div>
 		
 
 
-	<div id="footer">
-	Copyright © 2024 Bunny is moving , All rights reserved
-	</div>	
+	<div id="footer">Copyright © 2024 Bunny is moving , All rights reserved</div>	
 </div>
 
   </body>
@@ -281,7 +279,7 @@ function randomProp(){
 	contentClick(getRandomInt(13)+1,'#bg','B','bg')
 	contentClick(getRandomInt(15)+1,'#eye','E','Eye')
 	contentClick(getRandomInt(15)+1,'#mou','M','Mou')
-	contentClick(getRandomInt(19)+1,'#bas','BA','Bas')
+	contentClick(getRandomInt(15)+1,'#bas','BA','Bas')
 	contentClick(getRandomInt(10)+1,'#fac','F','Fac')
 }
 
@@ -291,6 +289,7 @@ function finish(){
 	$('#randomIcon').css({'display':'none'});
 	$('#contentArea').css({'display':'none'});
 	$('#resultPage').css({'display':'block'});
+	$('#again').css({'display':'block'});
 }
 
 
@@ -309,7 +308,27 @@ $('.contentProp').hover(
 	},2
 )
 
+function openLink(i){
+	var a
+	if(i=="sup"){
+		a="https://portaly.cc/bunnyismoving/support"
+	}else if(i=="ig"){
+		a="https://www.instagram.com/bunny_is_moving/"
+	}else if(i=="yt"){
+		a="https://www.youtube.com/@bunny_is_moving"
+	}else if(i=="all"){
+		a="https://portaly.cc/bunnyismoving"
+	}else if(i=="line"){
+		a="https://store.line.me/stickershop/author/108572/zh-Hant?lang=zh-Hant&utm_source=gnsh_staut"
+	}else if(i=='shop'){
+		a="https://myship.7-11.com.tw/general/detail/GM2212122639778"
+	}else if(i=='again'){
+		location.reload();
+	}
 
+
+	window.open(a,"_blank")
+}
 
 function saveImg() {
 	// $('#whiteFrame').css({'display':'none'});
@@ -349,7 +368,7 @@ function changeImage()
   }
   $('.ranPic').css('display','none');
   $('#ranPic'+randomImgNum).css('display','block');
-  },150)
+  },75)
 }
 //Random icon animation over
 
