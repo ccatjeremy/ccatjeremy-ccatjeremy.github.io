@@ -20,11 +20,14 @@
 	<div id="load">
 		<div id="load_photo">
 		<div id="load_A"></div>
-		<div id="load_B">loading...</div>
+		<div id="load_B"></div>
 		<div id="load_C"></div>
 		</div>
 	</div>
 <div id="main">
+	<div id="pop">
+		<div id="closePop" onclick="popCloseClick()"></div>
+	</div>
 		<div id="header" >
 			<div id="nextIcon" onclick="finish()" ></div>
 			<div id="randomIcon" onclick="randomProp()" onmouseover="onMouseOverRandomIcon()" onmouseout="onMouseOutRandomIcon()">
@@ -36,7 +39,7 @@
 			</div>
 			<div id="again" onclick="openLink('again')" ></div>
 		</div>
-
+		
 		<div id="avatar">
 			<a id="save">
 			<div id="bas1" class="avatarBA"><img class="imgAvatar" src="image/bas1.png"></div>
@@ -46,11 +49,11 @@
 			<div id="bas5" class="avatarBA"><img class="imgAvatar" src="image/bas5.png"></div>
 			<div id="bas6" class="avatarBA"><img class="imgAvatar" src="image/bas6.png"></div>
 			<div id="bas7" class="avatarBA"><img class="imgAvatar" src="image/bas7.png"></div>
-			<div id="bas8" class="avatarBA"><div class="imgAvatar" style="background-color: #abca8d;"></div></div>
-			<div id="bas9" class="avatarBA"><div class="imgAvatar" style="background-color: #abd7e3;"></div></div>
-			<div id="bas10" class="avatarBA"><div class="imgAvatar" style="background-color: #b1b1b1;"></div></div>
-			<div id="bas11" class="avatarBA"><div class="imgAvatar" style="background-color: #df827a;"></div></div>
-			<div id="bas12" class="avatarBA"><div class="imgAvatar" style="background-color: #F1c89c;"></div></div>
+			<div id="bas8" class="avatarBA"><img class="imgAvatar" src="image/bas8.png"></div>
+			<div id="bas9" class="avatarBA"><div class="imgAvatar" style="background-color: #abca8d;"></div></div>
+			<div id="bas10" class="avatarBA"><div class="imgAvatar" style="background-color: #abd7e3;"></div></div>
+			<div id="bas11" class="avatarBA"><div class="imgAvatar" style="background-color: #b1b1b1;"></div></div>
+			<div id="bas12" class="avatarBA"><div class="imgAvatar" style="background-color: #df827a;"></div></div>
 			<div id="bas13" class="avatarBA"><div class="imgAvatar" style="background-color: #f6c1c1;"></div></div>
 			<div id="bas14" class="avatarBA"><div class="imgAvatar" style="background-color: #faba70;"></div></div>
 			<div id="bas15" class="avatarBA"><div class="imgAvatar" style="background-color: #ffffff;"></div></div>
@@ -195,7 +198,7 @@
 				<div class="contentProp" id="conBas5" onclick="contentClick(5,'#bas','BA','Bas')"><a></a></div>
 				<div class="contentProp" id="conBas6" onclick="contentClick(6,'#bas','BA','Bas')"><a></a></div>
 				<div class="contentProp" id="conBas7" onclick="contentClick(7,'#bas','BA','Bas')"><a></a></div>
-				<div class="contentProp" id="conBas8" onclick="contentClick(8,'#bas','BA','Bas')"><span></span><a></a></div>
+				<div class="contentProp" id="conBas8" onclick="contentClick(8,'#bas','BA','Bas')"><a></a></div>
 				<div class="contentProp" id="conBas9" onclick="contentClick(9,'#bas','BA','Bas')"><span></span><a></a></div>
 				<div class="contentProp" id="conBas10" onclick="contentClick(10,'#bas','BA','Bas')"><span></span><a></a></div>
 				<div class="contentProp" id="conBas11" onclick="contentClick(11,'#bas','BA','Bas')"><span></span><a></a></div>
@@ -218,12 +221,13 @@
 				<div class="contentProp" id="conFac10" onclick="contentClick(10,'#fac','F','Fac')"><a></a></div>
 			</div>
 		</div>
+		
 		<div id="resultPage">
-			<div id="download" onclick="saveImg()"><a>下載</a></div>
-			<div id="donateB" onclick="openLink('sup')"><a>請廢兔喝咖啡</a></div>
+			<div id="download" onclick="saveImg()"></div>
+			<div id="donateB" onclick="openLink('sup')"></div>
 			<div id="storeArea">
-				<div id="store1" class="store" onclick="openLink('shop')">廢兔的店</div>
-				<div id="store2" class="store">聯名商品</div>
+				<div id="store1" class="store" onclick="openLink('shop')"></div>
+				<div id="store2" class="store"></div>
 			</div>
 
 			<div id="socialMedia">
@@ -236,6 +240,7 @@
 				</div>
 			</div>
 		</div>
+		<div id="adArea"></div>
 		
 
 
@@ -271,6 +276,10 @@ function tabClick(tabname){
 
 }
 
+function popCloseClick(){
+	$('#pop').css({'display':'none'});
+}
+
 function randomProp(){
 	function getRandomInt(max) {
   		return Math.floor(Math.random() * max);
@@ -284,12 +293,30 @@ function randomProp(){
 }
 
 function finish(){
+
+	function getRandomIntAD(max) {
+  		return Math.floor(Math.random() * max);
+	}
+
 	$('#tabBar').css({'display':'none'});
 	$('#nextIcon').css({'display':'none'});
 	$('#randomIcon').css({'display':'none'});
 	$('#contentArea').css({'display':'none'});
 	$('#resultPage').css({'display':'block'});
 	$('#again').css({'display':'block'});
+	$('#pop').css({'display':'block'});
+
+	var adImg;
+	var adRam = getRandomIntAD(3);
+
+	if(adRam == 1){
+		adImg = "url('image/bas1.png')"
+	}else if(adRam == 2){
+		adImg = "url('image/bas2.png')"
+	}else if(adRam == 3){
+		adImg = "url('image/bas3.png')"
+	}
+	$('#adArea').css({'background-image': adImg});
 }
 
 
@@ -372,47 +399,55 @@ function changeImage()
 }
 //Random icon animation over
 
-
-
 var x = window.innerWidth;
 var z = window.innerHeight;
-$(function(){
-function loadAnimate(){
-$('#load_A').animate({'left':0},1000);
-$('#load_A').animate({'left':18},1000);
+// $(function(){
+// function loadAnimate(){
+// $('#load_A').animate({'left':0},1000);
+// $('#load_A').animate({'left':18},1000);
 
-};
-loadAnimate()
-setInterval(loadAnimate,2500);
-});
-
-
+// };
+// loadAnimate()
+// setInterval(loadAnimate,2500);
+// });
 
 function adjust(){
-if(x<1500&&x>1082){
-$('#p1').css('width','1082');
+if(x<641){
+	$('#main').css('width','550');
+	$('#header').css('width','550');
+	$('#tabBar').css('height','120');
+	$('#tabBar').css('margin-top','20');
+	$('.tab').css('height','50');
+	$('.tab').css('width','28%');
+	$('.tab').css('margin-top','10');
+	$('.tab').css('background-size','70%,auto');
+	$('#pop').css('background-size','auto');
 
-}else if(x<1081&&x>638){
 
-$('#p1').css('width','95%');
-
-}else if(x<638){
-
-$('#header_content').css('font-size','14');
-$('#header_content').css('width','338');
-$('#p1').css('width','100%');
-}else{}
+}else{
+	$('#main').css('width','650');
+	$('#header').css('width','650');
+	$('#tabBar').css('height','52');
+	$('#tabBar').css('margin-top','30');
+	$('.tab').css('height','100%');
+	$('.tab').css('width','13%');
+	$('.tab').css('margin-top','0');
+	$('.tab').css('background-size','100%,auto');
+	$('#pop').css('background-size','100%');
+}
 
 };
 adjust()
 $(window).resize(function() {
+	x = window.innerWidth;
+	z = window.innerHeight;
 adjust();
 });
-<!--load animate-->
-$(window).load(function() {
-$( "#load" ).fadeOut();
-$('html, body').animate({scrollTop: $("#header").offset().top},10);
-});
+// <!--load animate-->
+// $(window).load(function() {
+// $( "#load" ).fadeOut();
+// $('html, body').animate({scrollTop: $("#header").offset().top},10);
+// });
 
 </script>
 </html>
