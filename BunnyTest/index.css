@@ -65,7 +65,7 @@
     float: right;
     border-radius: 17px;
     background-color: #FFCB65;
-    background-image: url('image/bg1.png');
+    background-image: url('image/back.png');
     background-size:100%,auto;
     background-repeat:no-repeat;
     display: none;
@@ -170,7 +170,7 @@ position:relative;
 }
 #download{
     width: 400px;
-    height: 35px;
+    height: 20px;
     border-radius:35px;
     background-color: #FFCB65;
     border:solid;
@@ -180,6 +180,10 @@ position:relative;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     padding: 15px;
+    background-image: url('image/download.png');
+    background-size:60%;
+    background-repeat:no-repeat;
+    background-position:center;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -195,7 +199,7 @@ position:relative;
 
 #donateB{
     width: 400px;
-    height: 35px;
+    height: 20px;
     border-radius:35px;
     background-color: #FFCB65;
     border:solid;
@@ -210,6 +214,10 @@ position:relative;
     margin-top: 20px;
     position: relative;
     box-shadow :5px 5px 0px #2e3035;
+    background-image: url('image/donate.png');
+    background-size:60%;
+    background-repeat:no-repeat;
+    background-position:center;
 }
 
 #donateB:hover{
@@ -228,6 +236,20 @@ position:relative;
     margin-right: auto;
     margin-top: 20px;
 }
+
+#store1{
+    background-image: url('image/shop-words.png');
+    background-size:60%;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+#store2{
+    background-image: url('image/shop2-words.png');
+    background-size:60%;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
 .store{
     position: relative;
     cursor: pointer;
@@ -276,13 +298,65 @@ position:relative;
 .SMS{
     height: 80px;
     width: 80px;
-    background-color: #ADD8E1;
+    background-color: #FFCB65;
     margin-left: 10px;
     margin-right: 10px;
     float: left;
     border-radius: 15px;
     cursor: pointer;
 }
+
+#adArea{
+    position: relative;
+    width: 100%;
+    height: 120px;
+}
+
+#pop{
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background-image: url('image/bas5.png');
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-position:center;
+    z-index: 10;
+    display: none;
+    margin-top: 5px;
+}
+#closePop{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 60px;
+    height: 60px;
+    background-color: #df827a;
+}
+#inst{
+    background-image: url('image/link01.png');
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+#yt{
+    background-image: url('image/link02.png');
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+#line{
+    background-image: url('image/link03.png');
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+#all{
+    background-image: url('image/link04.png');
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
 #tabBar{
     width: 100%;
     height: 52px;
@@ -572,40 +646,36 @@ position:relative;
 #conBas7{
     background-image:url('image/bas7.png');
 }
-#conBas8 span{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    background-color:#abca8d
+#conBas8 {
+    background-image:url('image/bas8.png');
 }
 #conBas9 span{
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 12px;
-    background-color:#abd7e3;
+    background-color:#abca8d;
 }
 #conBas10 span{
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 12px;
-    background-color:#b1b1b1;
+    background-color:#abd7e3;
 }
 #conBas11 span{
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 12px;
-    background-color:#df827a;
+    background-color:#b1b1b1;
 }
 #conBas12 span{
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 12px;
-    background-color:#F1c89c;
+    background-color:#df827a;
 }
 #conBas13 span{
     position: absolute;
