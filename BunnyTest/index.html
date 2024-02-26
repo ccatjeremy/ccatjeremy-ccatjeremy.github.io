@@ -239,6 +239,7 @@
 					<div id="all" class="SMS" onclick="openLink('all')"></div>
 				</div>
 			</div>
+			<img id="imgResult">
 		</div>
 		<div id="adArea"></div>
 		
@@ -367,9 +368,12 @@ function saveImg() {
         useCORS: true,
         onrendered: function(canvas) {
             var download = document.createElement('a');
-            download.href = canvas.toDataURL("image/png");
+			download.href = canvas.toDataURL("image/png");
             download.download = "bunny.png";
             download.click();
+
+			const imgResult = canvas.toDataURL('image/png');
+			document.getElementById('imgResult').src = imgResult
         }
     });
 	// $('#whiteFrame').css({'display':'none'});
