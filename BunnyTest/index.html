@@ -118,9 +118,10 @@
 			<div id="fac8" class="avatarF"><img class="imgAvatar" src="image/fac8.png"></div>
 			<div id="fac9" class="avatarF"><img class="imgAvatar" src="image/fac9.png"></div>
 			<div id="fac10" class="avatarF"><img class="imgAvatar" src="image/fac10.png"></div>
-
+			<img id="imgResult">
 			</a>
 			<div id="whiteFrame"></div>
+			
 		</div>
 		<div id="tabBar">
 			<div id="bgTab" class="tab" onclick="tabClick('bg')"></div>
@@ -239,7 +240,7 @@
 					<div id="all" class="SMS" onclick="openLink('all')"></div>
 				</div>
 			</div>
-			<img id="imgResult">
+			
 		</div>
 		<div id="adArea"></div>
 		
@@ -319,6 +320,8 @@ function finish(){
 		adImg = "url('image/bas3.png')"
 	}
 	$('#adArea').css({'background-image': adImg});
+	$('#imgResult').css({'display':'block'});
+	turnImg()
 }
 
 
@@ -371,7 +374,18 @@ function saveImg() {
 			download.href = canvas.toDataURL("image/png");
             download.download = "bunny.png";
             download.click();
+        }
+    });
+	// $('#whiteFrame').css({'display':'none'});
+}
+function turnImg() {
+	// $('#whiteFrame').css({'display':'none'});
 
+    var element = document.querySelector("#save");
+    html2canvas(element, {
+        allowTaint: true,
+        useCORS: true,
+        onrendered: function(canvas) {
 			const imgResult = canvas.toDataURL('image/png');
 			document.getElementById('imgResult').src = imgResult
         }
