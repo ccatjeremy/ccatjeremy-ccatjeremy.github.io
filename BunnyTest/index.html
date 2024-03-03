@@ -386,7 +386,7 @@ function saveImg() {
 	// $('#whiteFrame').css({'display':'none'});
 }
 function turnImg() {
-	// $('#whiteFrame').css({'display':'none'});
+	$('.imgAvatar').css({'border-radius':'0'});
 
     var element = document.querySelector("#save");
     html2canvas(element, {
@@ -397,6 +397,7 @@ function turnImg() {
 			document.getElementById('imgResult').src = imgResult
         }
     });
+	$('.imgAvatar').css({'border-radius':'17px'});
 	// $('#whiteFrame').css({'display':'none'});
 }
 
