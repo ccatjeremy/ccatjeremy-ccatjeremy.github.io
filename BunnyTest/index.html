@@ -38,6 +38,7 @@
 				</div>
 			</div>
 			<div id="again" onclick="reload()" ></div>
+			<div id="language" onclick="languageSw()" ></div>
 		</div>
 		
 		<div id="avatar">
@@ -227,7 +228,9 @@
 		</div>
 		
 		<div id="resultPage">
+			<div id="no-com"></div>
 			<div id="download" onclick="saveImg()"></div>
+			<div id="press-save"></div>
 			<div id="donateB" onclick="openLink('sup')"></div>
 			<div id="storeArea">
 				<div id="store1" class="store" onclick="openLink('shop')"></div>
@@ -424,6 +427,38 @@ function changeImage()
 
 var x = window.innerWidth;
 var z = window.innerHeight;
+var lan = "cht"
+
+function languageSw(){
+	if(lan=="cht"){
+		lan="en";
+		$('#language').css('background-image',"url('image/cht.png')");
+		$('#no-com').css('background-image',"url('image/no-com-en.png')");
+		$('#no-com').css('background-size',"90%");
+		$('#download').css('background-image',"url('image/download-En.png')");
+		$('#donateB').css('background-image',"url('image/donate-En.png')");
+		$('#store1').css('background-image',"url('image/Bunny-Shop.png')");
+		$('#store1').css('background-size',"75%");
+		$('#store2').css('background-image',"url('image/Bunny-Co-branding.png')");
+		$('#store2').css('background-size',"85%");
+		$('#press-save').css('background-image',"url('image/Long-press-en.png')");
+
+
+	}else if(lan=="en"){
+		lan="cht";
+		$('#language').css('background-image',"url('image/En.png')");
+		$('#no-com').css('background-image',"url('image/no-com.png')");
+		$('#no-com').css('background-size',"60%");
+		$('#download').css('background-image',"url('image/download.png')");
+		$('#donateB').css('background-image',"url('image/donate.png')");
+		$('#store1').css('background-image',"url('image/shop-words.png')");
+		$('#store1').css('background-size',"60%");
+		$('#store2').css('background-image',"url('image/shop2-words.png')");
+		$('#store2').css('background-size',"60%");
+		$('#press-save').css('background-image',"url('image/Long-press.png')");
+
+	}
+}
 // $(function(){
 // function loadAnimate(){
 // $('#load_A').animate({'left':0},1000);
